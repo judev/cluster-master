@@ -2,11 +2,12 @@
   "contributors": [
     "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
     "Jeff Barczewski <jeff.barczewski@gmail.com> (http://codewinds.com/blog.html)",
-    "Sean McCullough <mcculloughsean@gmail.com>"
+    "Sean McCullough <mcculloughsean@gmail.com>",
+    "Jude Venn <judev@cuttlefish.com>"
   ],
   "name": "cluster-master-ext",
   "description": "A module for taking advantage of the built-in `cluster` module in node v0.8+, enables rolling worker restarts, resizing, repl, events, configurable timeouts, debug method. Zero downtime deploy of workers. Extended version of cluster-master",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "repository": {
     "type": "git",
     "url": "git://github.com/jeffbski/cluster-master.git"

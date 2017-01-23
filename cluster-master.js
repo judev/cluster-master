@@ -254,7 +254,8 @@ function setupRepl () {
       sock.repl = r
 
       // overwrite original .exit since not closing properly
-      r.commands['.exit'].action = function () {
+      var exitCommand = r.commands['exit'] || r.commands['.exit']
+      exitCommand.action = function () {
         end()
         sock.end()
       };
