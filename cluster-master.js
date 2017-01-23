@@ -323,7 +323,7 @@ function forkListener () {
     worker.on("exit", function () {
       clearTimeout(disconnectTimer)
 
-      if (!worker.suicide) {
+      if ((process.version < 'v6' && !worker.suicide) || !worker.exitedAfterDisconnect) {
         debug("Worker %j exited abnormally, idx:", id, worker.clusterIdx);
         replaceWorkerIdxs.push(worker.clusterIdx);
         // don't respawn right away if it's a very fast failure.
